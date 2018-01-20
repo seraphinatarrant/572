@@ -1,0 +1,36 @@
+%%%%%%%%%%% israel 0.178363079143 350 2350
+%%%%%%%%%%% tepol 0.0435893030429 3 347
+%%%%%%%%%%% turkish 0.156287507902 189 2161
+%%%%%%%%%%% possible 0.251629167388 2 1
+%%%%%%%%%%% jack 0.0360739416244 16 331
+%%%%%%%%%%% jhu 0.0924488001586 15 174
+%%%%%%%%%%% gun 0.11688062473 346 1815
+%%%%%%%%%%% None 0.0 0 0
+%%%%%%%%%%% has 0.271038232535 5 11
+%%%%%%%%%%% repeated 0.0345995741625 8 323
+%%%%%%%%%%% race 0.170950594455 3 12
+%%%%%%%%%%% winnipeg 0.0395487637731 1 173
+%%%%%%%%%%% homeland 0.0718446949794 3 343
+%%%%%%%%%%% fbi 0.0764487975829 271 1544
+Confusion matrix for the training data:
+row is the truth, column is the system output
+
+                   talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns      474 2 424
+talk.politics.mideast   4 506 390
+talk.politics.misc      139 19 742
+
+Training accuracy=0.6377777777777778
+
+
+Confusion matrix for the test data:
+row is the truth, column is the system output
+
+                   talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns      36 0 64
+talk.politics.mideast   0 58 42
+talk.politics.misc      32 4 64
+
+Test accuracy=0.5266666666666666
+
+
