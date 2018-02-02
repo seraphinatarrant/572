@@ -86,8 +86,8 @@ def print_results(results):
 
 if __name__ == "__main__":
     # for testing - working version will read from stdin
-    #infile = fileinput.input()
-    infile = open(sys.argv[1], 'r')
+    infile = fileinput.input()
+    #infile = open(sys.argv[1], 'r')
     class_feature_counts, class_counts, all_features = read_svm_light(infile)
     results = rank_by_chi_squared(class_feature_counts, class_counts, all_features)
     print_results(results)
