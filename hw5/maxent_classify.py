@@ -133,7 +133,7 @@ if __name__ == "__main__":
     # classify test records
     gold, predict, conf = maxent_classify(test_records, c_weights, f_weights)
     #TODO sort out what's going on with calc_accuracy
-    calc_accuracy(gold, predict, list(c_weights), 'Testing')
+    calc_accuracy(gold, predict, sorted(list(c_weights)), 'Testing')
     write_sys_output(conf, gold, 'test', args.output_filename)
 
     
