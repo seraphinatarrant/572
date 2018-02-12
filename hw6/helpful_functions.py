@@ -80,14 +80,15 @@ def read_maxent_model(model_file):
 
     return class_weights, feature_weights
 
-def maxent_classify_standard(test_record, class_weights, feature_weights):
+def maxent_classify_standard(test_record, class_weights, feature_weights, topN=None):
     '''
     Runs MaxEnt on a single test record based on the standard svm format. This version does not pick a winner,
     it only returns the confidences array
     :param test_record: alist [instanceName, gold label, set of features]
     :param class_weights: a dict of class: default class weight
     :param feature_weights: a nested dict of class: feature: weight
-    :return: sorted list of confidences (class probabilities) for all classes
+    :param topN: if present, returns only the topN probabilities/confidences (I really shouldn't keep switching terms)
+    :return: sorted list of confidences (class probabilities) for all classes. Probabilities are in logform.
     '''
     all_classes = list(class_weights)  # make classes a list so results can be a coindexed list, makes some processing easier
     all_features = set()  # create a set of all features to use in iteration
@@ -105,7 +106,11 @@ def maxent_classify_standard(test_record, class_weights, feature_weights):
         Z_total += sum
         class_results.append(sum)
 
-    class_results = (np.array(class_results)) / Z_total
+    class_results = np.log10(((np.array(class_results)) / Z_total))
+    #if topN declared, then keep only that many TODO CURRENTLY NOT WORKING
+    if topN:
+        indices = np.argpartition(class_results, -topN)[-topN:]
+        class_results = [class_results[index] for index in indices]
     # get confidences
     class_probabilities = list(zip(all_classes, class_results))
     # Sort on the probabilities by alphabet and by confidence, with confidence most important

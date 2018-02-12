@@ -6,15 +6,17 @@ Command to run: beamsearch_maxent.py test_data boundary_file model_file sys_outp
 import argparse
 from helpful_functions import read_maxent_model, maxent_classify_standard, calc_accuracy
 from collections import deque, defaultdict
+from math import log10
+import numpy as np
 
 
 class BSNode:
 
-    def __init__(self, tag, tag_prob):
-        self.path_prob = None
+    def __init__(self, tag, tag_prob, path_prob, prev_node=None):
+        self.path_prob = path_prob
         self.tag = tag
         self.tag_prob = tag_prob
-        self.prev_node = None
+        self.prev_node = prev_node
 
     def __str__(self):
         return '{} {}'.format(self.tag, self.path_prob)
@@ -69,7 +71,7 @@ def standard_to_binary_features(input_file, boundaries):
                 [feat_set.add(line[i]) for i in range(2, len(line), 2)] # create a feat set
                 curr_record.append([instanceName, gold_tag, feat_set])
             curr_line += 1
-        all_records.append(curr_record) # this catches the last record
+        all_records.append(curr_record)  # this catches the last record
     return all_records
 
 
@@ -103,40 +105,44 @@ def beam_search_maxent(records, class_weights, feature_weights, beam_size, topN,
     output_data, gold_label_list, predictions = [], [], [] # for returning
     for record in records:  # each record is a single sentence of many words
         eos = len(record)
-        state_table = defaultdict(list)
+        node_state_table, prob_state_table = [[] for i in range(eos)], [[] for i in range(eos)]
         # initialise lists for tracking accuracy later
         labels = [record[0][0]]
         golds = [record[0][1]]  # instancename & gold label - later will zip together with results
         # initialise first word. Have to go one word at a time since the vector for the next word depends on previous
-        classifications = maxent_classify_standard(record[0], class_weights, feature_weights) # returns pre-sorted
-        # pick topN for first word to initialise, and create BSNodes
-        start_nodes = [BSNode(*i) for i in classifications[:topN]]
-        dummy_start_node = BSNode('BOS', 1.0)
-        for node in start_nodes:  # set path probs
-            node.path_prob = node.get_tag_prob()
-            node.prev_node = dummy_start_node
-        state_table[0] = start_nodes
+        classifications = maxent_classify_standard(record[0], class_weights, feature_weights)  # returns pre-sorted and only topN
+        # create BSNodes
+        dummy_start_node = BSNode('BOS', 0.0, 0.0)  # since logprobs
+        start_nodes = [BSNode(tag, tag_prob, tag_prob, dummy_start_node) for tag, tag_prob in classifications[:topN]]
+        node_state_table[0] = start_nodes
         # iterate through the rest of the sentence word by word
         for i in range(1, eos):
-            nodes_to_expand = state_table[i-1]  # this doesn't really have to be a copy since I won't need it to traverse...which means I could probably do it with a more efficient structure
+            nodes_to_expand = node_state_table[i-1]  # this doesn't really have to be a copy since I won't need it to traverse...which means I could probably do it with a more efficient structure
             instancename, gold_label, feats = record[i]
             labels.append(instancename)
             golds.append(gold_label)
-            while nodes_to_expand:
-                prev_node = nodes_to_expand.pop()
+            all_next_nodes = []
+            for j in range(len(nodes_to_expand)):
+                prev_node = nodes_to_expand[j]
+                prev_path_prob = prev_node.get_path_prob()
                 prevTag, prev2Tag = prev_node.get_tag(), prev_node.get_prev_node().get_tag()
                 # add tags to existing feature set
                 new_feats = {'prevT={}'.format(prevTag), 'prevTwoTags={}+{}'.format(prev2Tag, prevTag)} | feats
-                next_classes = maxent_classify_standard([instancename, gold_label, new_feats], class_weights, feature_weights)
-                next_nodes = [BSNode(*i) for i in next_classes[:topN]]
-                for node in next_nodes:
-                    node.prev_node = prev_node
-                    node.path_prob = node.tag_prob * node.get_prev_node().get_path_prob()
-                state_table[i].extend(next_nodes)
-            # prune nodes TODO prune based on maxprob not just topK
-            state_table[i] = sorted(state_table[i], key=lambda x: x.get_path_prob(), reverse=True)[:topK]
+                next_classes = maxent_classify_standard([instancename, gold_label, new_feats], class_weights,
+                                                        feature_weights)
+                next_nodes = [BSNode(tag, tag_prob, prev_path_prob+tag_prob, prev_node) for tag, tag_prob in next_classes[:topN]] # I could pass topN to maxent classify and only return top N
+                all_next_nodes.extend(next_nodes)
+            # prune nodes
+            prob_array = np.array([node.get_path_prob() for node in all_next_nodes])
+            next_nodes_array = np.array(all_next_nodes)
+            max_prob = np.max(prob_array) - beam_size
+            if len(next_nodes_array) > topK:
+                next_nodes_topK = next_nodes_array[np.argpartition(prob_array, -topK)[-topK:]]
+            else:
+                next_nodes_topK = next_nodes_array
+            node_state_table[i] = [node for node in next_nodes_topK if node.get_path_prob() >= max_prob]
         # traverse winning path
-        winner = max(state_table[eos-1], key=lambda x: x.get_path_prob())
+        winner = max(node_state_table[eos-1], key=lambda x: x.get_path_prob())
         win_sequence = list(backtrace(winner, [winner]))
         output_data.extend(['{} {} {}'.format(labels[i], golds[i], str(win_sequence[i])) for i in range(eos)])
         gold_label_list.extend(golds)
