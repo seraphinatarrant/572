@@ -89,13 +89,15 @@ def backtrace(node, sequence):
     return reversed(sequence)
 
 
-def beam_search_maxent(records, class_weights, feature_weights, beam_size, topN, topK):
+def beam_search_maxent(records, class_weights, feature_weights, all_classes, all_features, beam_size, topN, topK):
     '''
 
     :param test_records: a triply nested list, each index is a sentence, each index within that list is a word, which
     consists of arbitrary instanceName, gold label, and feature set
     :param c_weights: default class weights
     :param f_weights: default feature weights
+    :param all_classes: list of all classes
+    :param all_features: set of all features
     :param beam_size: beam size for pruning
     :param topN: topN to select each time expand nodes
     :param topK: topK winning paths to keep
@@ -110,7 +112,7 @@ def beam_search_maxent(records, class_weights, feature_weights, beam_size, topN,
         labels = [record[0][0]]
         golds = [record[0][1]]  # instancename & gold label - later will zip together with results
         # initialise first word. Have to go one word at a time since the vector for the next word depends on previous
-        classifications = maxent_classify_standard(record[0], class_weights, feature_weights)  # returns pre-sorted and only topN
+        classifications = maxent_classify_standard(record[0], class_weights, feature_weights, all_classes, all_features)  # returns pre-sorted and only topN
         # create BSNodes
         dummy_start_node = BSNode('BOS', 0.0, 0.0)  # since logprobs
         start_nodes = [BSNode(tag, tag_prob, tag_prob, dummy_start_node) for tag, tag_prob in classifications[:topN]]
@@ -129,7 +131,7 @@ def beam_search_maxent(records, class_weights, feature_weights, beam_size, topN,
                 # add tags to existing feature set
                 new_feats = {'prevT={}'.format(prevTag), 'prevTwoTags={}+{}'.format(prev2Tag, prevTag)} | feats
                 next_classes = maxent_classify_standard([instancename, gold_label, new_feats], class_weights,
-                                                        feature_weights)
+                                                        feature_weights, all_classes, all_features)
                 next_nodes = [BSNode(tag, tag_prob, prev_path_prob+tag_prob, prev_node) for tag, tag_prob in next_classes[:topN]] # I could pass topN to maxent classify and only return top N
                 all_next_nodes.extend(next_nodes)
             # prune nodes
@@ -144,7 +146,7 @@ def beam_search_maxent(records, class_weights, feature_weights, beam_size, topN,
         # traverse winning path
         winner = max(node_state_table[eos-1], key=lambda x: x.get_path_prob())
         win_sequence = list(backtrace(winner, [winner]))
-        output_data.extend(['{} {} {}'.format(labels[i], golds[i], str(win_sequence[i])) for i in range(eos)])
+        output_data.extend(['{} {} {} {}'.format(labels[i], golds[i], win_sequence[i].get_tag(), 10**win_sequence[i].get_tag_prob()) for i in range(eos)])
         gold_label_list.extend(golds)
         predictions.extend([win_sequence[i].get_tag() for i in range(eos)])
 
@@ -166,10 +168,10 @@ if __name__ == "__main__":
     p.add_argument('topK', type=int, help='Max num paths kept alive')
     args = p.parse_args()
 
-    c_weights, f_weights = read_maxent_model(args.model_file)
+    c_weights, f_weights, all_c, all_f = read_maxent_model(args.model_file)
     sent_lengths = read_boundary_num(args.boundary_file)
     test_records = standard_to_binary_features(args.test_filename, sent_lengths)
-    sys_out, g, p = beam_search_maxent(test_records, c_weights, f_weights, args.beam_size, args.topN, args.topK) #COULD DO THIS ONE BY ONE RATHER THAN ALL AT ONCE...
+    sys_out, g, p = beam_search_maxent(test_records, c_weights, f_weights, all_c, all_f, args.beam_size, args.topN, args.topK) #COULD DO THIS ONE BY ONE RATHER THAN ALL AT ONCE...
     calc_accuracy(g, p, list(c_weights), 'test')
 
     with open(args.output_filename, 'w') as outfile:

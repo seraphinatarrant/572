@@ -42,8 +42,46 @@ def write_sys_output(dist, labels, type='test', output_filename='tmp_output.txt'
             outfile.write('array:{} {} {}\n'.format(index, gold, dist_str))
         outfile.write('\n\n')
 
-
 def read_maxent_model(model_file):
+    '''
+    MaxEnt model file is of this format:
+    FEATURES FOR CLASS talk.politics.guns
+    <default> -0.15835489728361463
+    a -0.18898115373818014
+
+    where FEATURES FOR CLASS declares the class, the default is the weight for the class, and below that are the feature
+    weights for that class, until the next class declaration.
+    :param model_file: the name of a file containing a maxent model
+    :return: a feat2idx dict and a massive feature vector
+    '''
+    class_declaration = 'FEATURES FOR CLASS '
+    default_declaration = '<default> '
+    class_regex = re.compile('(?<=^{} ).+'.format(class_declaration))
+    default_regex = re.compile('(?<=^{} ).+'.format(default_declaration))
+    class_weights = defaultdict(float)
+    feature_weights = defaultdict(lambda: defaultdict(float))
+    with open(model_file, 'r') as mfile:
+        for line in mfile:
+            if line:
+                line = line.strip()
+                if line.startswith(class_declaration):
+                    #current_class = class_regex.search(line).group(0)  # extracts the class label following declaration
+                    current_class = re.search(r'(?<=^FEATURES FOR CLASS ).+', line).group(0)
+                    continue
+                if line.startswith(default_declaration): # not the fastest, but readable. could collapse into a single if statement if an issue.
+                    #class_weights[current_class] = float(default_regex.search(line).group(0))
+                    class_weights[current_class] = float(re.search(r'(?<=^<default> ).+', line).group(0))
+                    continue
+
+                feature, weight = line.split()
+                feature_weights[current_class][feature] = float(weight)
+    all_classes = list(class_weights)  # make classes a list so results can be a coindexed list, makes some processing easier
+    all_features = set()  # create a set of all features to use in iteration
+    [all_features.update(set(feature_weights[c])) for c in feature_weights]
+
+    return class_weights, feature_weights, all_classes, all_features
+
+def old_read_maxent_model(model_file):
     '''
     MaxEnt model file is of this format:
     FEATURES FOR CLASS talk.politics.guns
@@ -74,13 +112,12 @@ def read_maxent_model(model_file):
                     #class_weights[current_class] = float(default_regex.search(line).group(0))
                     class_weights[current_class] = float(re.search(r'(?<=^<default> ).+', line).group(0))
                     continue
-
                 feature, weight = line.split()
                 feature_weights[current_class][feature] = float(weight)
 
     return class_weights, feature_weights
 
-def maxent_classify_standard(test_record, class_weights, feature_weights, topN=None):
+def maxent_classify_standard(test_record, class_weights, feature_weights, all_classes, all_features, topN=None):
     '''
     Runs MaxEnt on a single test record based on the standard svm format. This version does not pick a winner,
     it only returns the confidences array
@@ -90,10 +127,6 @@ def maxent_classify_standard(test_record, class_weights, feature_weights, topN=N
     :param topN: if present, returns only the topN probabilities/confidences (I really shouldn't keep switching terms)
     :return: sorted list of confidences (class probabilities) for all classes. Probabilities are in logform.
     '''
-    all_classes = list(class_weights)  # make classes a list so results can be a coindexed list, makes some processing easier
-    all_features = set()  # create a set of all features to use in iteration
-    [all_features.update(set(feature_weights[c])) for c in feature_weights]
-
     inst_name, label, doc_features = test_record
     features = doc_features & all_features
     class_results = []  # will have the results for the record for each class, where indices for class_list and results are the same
