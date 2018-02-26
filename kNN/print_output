@@ -1,0 +1,406 @@
+Testing on training
+tie on 5
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 8
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 9
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 13
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 14
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 35
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 37
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 39
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 41
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 48
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 89
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 99
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 107
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 123
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 130
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 142
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 182
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 191
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 195
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 239
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 245
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 258
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 262
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 268
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 286
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 308
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 316
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 318
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 320
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 345
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 352
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 356
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 365
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 383
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 395
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 417
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 453
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 469
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 474
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 483
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 487
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 506
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 526
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 535
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 539
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 559
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 569
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 576
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 597
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 626
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 629
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 645
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 651
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 663
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 664
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 676
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 686
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 702
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 754
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 756
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 775
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 784
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 822
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 823
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 853
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 857
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 859
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 911
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 912
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 939
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 984
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 986
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 1048
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1086
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1105
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 1114
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1122
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 1124
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1136
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1149
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 1157
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1240
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1259
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1279
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 1321
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1340
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 1370
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1375
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1402
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 1435
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1465
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 1484
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1487
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 1528
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1572
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 1616
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1630
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1635
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1648
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1692
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1715
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1740
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1768
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 1772
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 1774
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1775
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1776
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1800
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1819
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 1829
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1830
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1836
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1863
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 1872
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1883
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1904
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1945
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1957
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 1977
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 1978
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 2005
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2024
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 2030
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 2031
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2057
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 2093
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 2109
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 2137
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2148
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2151
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2176
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2191
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2194
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 2235
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2242
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 2297
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2299
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2312
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2327
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 2351
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2365
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2374
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2375
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 2420
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2424
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2435
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2495
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2512
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 2520
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 2521
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 2526
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2540
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2552
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 2564
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2603
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 2624
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 2637
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2677
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2680
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 2685
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 2687
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 2694
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+Testing on testing
+tie on 9
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 11
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 23
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 28
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 37
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 44
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 45
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 59
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 64
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 73
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 76
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 90
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 107
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 108
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 130
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 133
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 134
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 196
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 204
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 210
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 221
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 224
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 228
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 235
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 245
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+tie on 258
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 268
+[('talk.politics.guns', 2), ('talk.politics.mideast', 2), ('talk.politics.misc', 1)]
+tie on 294
+[('talk.politics.guns', 2), ('talk.politics.misc', 2), ('talk.politics.mideast', 1)]
+tie on 297
+[('talk.politics.mideast', 2), ('talk.politics.misc', 2), ('talk.politics.guns', 1)]
+Confusion matrix for the training data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         729 56 115
+talk.politics.mideast      21 816 63
+talk.politics.misc         57 118 725
+
+Training accuracy=0.84074
+
+
+Confusion matrix for the testing data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         64 11 25
+talk.politics.mideast      3 79 18
+talk.politics.misc         19 17 64
+
+Testing accuracy=0.69000
+
+

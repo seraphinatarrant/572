@@ -1,0 +1,10 @@
+build_kNN.sh
+
+rank_feat_by_chi_square.sh
+
+feat_list
+
+
+sys_output
+acc_file for k=5 with cosine
+

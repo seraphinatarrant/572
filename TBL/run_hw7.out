@@ -1,0 +1,308 @@
+Confusion matrix for the baseline data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.misc talk.politics.mideast
+talk.politics.guns         900 0 0
+talk.politics.misc         900 0 0
+talk.politics.mideast      900 0 0
+
+baseline accuracy=0.33333
+
+
+Confusion matrix for the test data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.misc talk.politics.mideast
+talk.politics.guns         896 0 4
+talk.politics.misc         881 0 19
+talk.politics.mideast      573 0 327
+
+test accuracy=0.45296
+
+
+Confusion matrix for the baseline data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         100 0 0
+talk.politics.mideast      100 0 0
+talk.politics.misc         100 0 0
+
+baseline accuracy=0.33333
+
+
+Confusion matrix for the test data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         100 0 0
+talk.politics.mideast      75 25 0
+talk.politics.misc         98 2 0
+
+test accuracy=0.41667
+
+
+Confusion matrix for the baseline data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         900 0 0
+talk.politics.mideast      900 0 0
+talk.politics.misc         900 0 0
+
+baseline accuracy=0.33333
+
+
+Confusion matrix for the test data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         853 4 43
+talk.politics.mideast      319 571 10
+talk.politics.misc         629 35 236
+
+test accuracy=0.61481
+
+
+Confusion matrix for the baseline data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         100 0 0
+talk.politics.mideast      100 0 0
+talk.politics.misc         100 0 0
+
+baseline accuracy=0.33333
+
+
+Confusion matrix for the test data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         97 0 3
+talk.politics.mideast      31 67 2
+talk.politics.misc         69 4 27
+
+test accuracy=0.63667
+
+
+Confusion matrix for the baseline data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         900 0 0
+talk.politics.mideast      900 0 0
+talk.politics.misc         900 0 0
+
+baseline accuracy=0.33333
+
+
+Confusion matrix for the test data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         797 9 94
+talk.politics.mideast      202 658 40
+talk.politics.misc         471 37 392
+
+test accuracy=0.68407
+
+
+Confusion matrix for the baseline data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         100 0 0
+talk.politics.mideast      100 0 0
+talk.politics.misc         100 0 0
+
+baseline accuracy=0.33333
+
+
+Confusion matrix for the test data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         86 0 14
+talk.politics.mideast      20 76 4
+talk.politics.misc         47 6 47
+
+test accuracy=0.69667
+
+
+Confusion matrix for the baseline data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         900 0 0
+talk.politics.mideast      900 0 0
+talk.politics.misc         900 0 0
+
+baseline accuracy=0.33333
+
+
+Confusion matrix for the test data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         827 9 64
+talk.politics.mideast      173 698 29
+talk.politics.misc         353 39 508
+
+test accuracy=0.75296
+
+
+Confusion matrix for the baseline data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.misc talk.politics.mideast
+talk.politics.guns         100 0 0
+talk.politics.misc         100 0 0
+talk.politics.mideast      100 0 0
+
+baseline accuracy=0.33333
+
+
+Confusion matrix for the test data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.misc talk.politics.mideast
+talk.politics.guns         86 14 0
+talk.politics.misc         36 58 6
+talk.politics.mideast      17 7 76
+
+test accuracy=0.73333
+
+
+Confusion matrix for the baseline data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         900 0 0
+talk.politics.mideast      900 0 0
+talk.politics.misc         900 0 0
+
+baseline accuracy=0.33333
+
+
+Confusion matrix for the test data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         839 10 51
+talk.politics.mideast      89 776 35
+talk.politics.misc         206 48 646
+
+test accuracy=0.83741
+
+
+Confusion matrix for the baseline data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.misc talk.politics.mideast
+talk.politics.guns         100 0 0
+talk.politics.misc         100 0 0
+talk.politics.mideast      100 0 0
+
+baseline accuracy=0.33333
+
+
+Confusion matrix for the test data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.misc talk.politics.mideast
+talk.politics.guns         83 17 0
+talk.politics.misc         30 64 6
+talk.politics.mideast      14 7 79
+
+test accuracy=0.75333
+
+
+Confusion matrix for the baseline data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.misc talk.politics.mideast
+talk.politics.guns         900 0 0
+talk.politics.misc         900 0 0
+talk.politics.mideast      900 0 0
+
+baseline accuracy=0.33333
+
+
+Confusion matrix for the test data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.misc talk.politics.mideast
+talk.politics.guns         855 39 6
+talk.politics.misc         126 730 44
+talk.politics.mideast      45 21 834
+
+test accuracy=0.89593
+
+
+Confusion matrix for the baseline data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         100 0 0
+talk.politics.mideast      100 0 0
+talk.politics.misc         100 0 0
+
+baseline accuracy=0.33333
+
+
+Confusion matrix for the test data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         81 3 16
+talk.politics.mideast      11 83 6
+talk.politics.misc         23 5 72
+
+test accuracy=0.78667
+
+
+Confusion matrix for the baseline data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         900 0 0
+talk.politics.mideast      900 0 0
+talk.politics.misc         900 0 0
+
+baseline accuracy=0.33333
+
+
+Confusion matrix for the test data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         883 1 16
+talk.politics.mideast      19 867 14
+talk.politics.misc         61 37 802
+
+test accuracy=0.94519
+
+
+Confusion matrix for the baseline data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         100 0 0
+talk.politics.mideast      100 0 0
+talk.politics.misc         100 0 0
+
+baseline accuracy=0.33333
+
+
+Confusion matrix for the test data:
+row is the truth, column is the system output
+
+                      talk.politics.guns talk.politics.mideast talk.politics.misc
+talk.politics.guns         82 4 14
+talk.politics.mideast      9 83 8
+talk.politics.misc         20 5 75
+
+test accuracy=0.80000
+
+
